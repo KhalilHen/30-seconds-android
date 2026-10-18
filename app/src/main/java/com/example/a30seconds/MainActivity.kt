@@ -12,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.a30seconds.screens.HomePage
 import com.example.a30seconds.ui.theme._30SecondsTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,31 +23,14 @@ class MainActivity : ComponentActivity() {
             _30SecondsTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 
-
-//                    Button(Text( 'test')) { }
-
-                    Greeting(
-                        name = "Android",
+                    HomePage(
                         modifier = Modifier.padding(innerPadding)
                     )
+
+
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    _30SecondsTheme {
-        Greeting("Android")
-    }
-}
